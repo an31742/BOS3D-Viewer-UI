@@ -1,3 +1,10 @@
+/*
+ * @Author: maxiangan
+ * @Date: 2023-10-16 09:15:20
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-10-17 16:15:24
+ * @Description: 请填写简介
+ */
 import * as actionType from "./actionType";
 
 export function changeToolbarState(name, enable) {
@@ -23,6 +30,7 @@ export function setCustomToolbarState(toolState) {
 }
 
 export function changeDisplaySetting(name, value) {
+  window.localStorage.setItem(`${name}`, value);
   return {
     type: actionType.CHANGE_DISPLAY_SETTING,
     name,
