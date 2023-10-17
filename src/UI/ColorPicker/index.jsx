@@ -544,6 +544,8 @@ class ColorPicker extends React.Component {
   }
 
   restoreColor() {
+    console.log("this._initialColor", this._initialColor);
+    window.localStorage.setItem('color', this._initialColor);
     if (this._initialColor) {
       this.setState({
         color: _.cloneDeep(this._initialColor)
@@ -555,6 +557,8 @@ class ColorPicker extends React.Component {
   }
 
   onConfirm() {
+    window.localStorage.setItem('color', this.state.color);
+    console.log("this.state.color", this.state.color);
     ColorPicker.pushToRecentColors(this.state.color);
     this.setState({
       recentColors: ColorPicker.recentColors

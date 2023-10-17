@@ -7,8 +7,8 @@ class Table extends React.Component {
   constructor(props) {
     super(props);
     const expand = {};
-    _.keys(props.data).forEach(k => {
-      if (typeof props.data[k] === 'object') {
+    _.keys(props.data).forEach((k) => {
+      if (typeof props.data[k] === "object") {
         expand[k] = true;
       }
     });
@@ -17,10 +17,10 @@ class Table extends React.Component {
     };
   }
 
-  toggleExpand (e, key) {
+  toggleExpand(e, key) {
     e.preventDefault();
     e.stopPropagation();
-    this.setState(state => ({
+    this.setState((state) => ({
       expand: {
         ...state.expand,
         [key]: !state.expand[key],
@@ -28,39 +28,53 @@ class Table extends React.Component {
     }));
   }
 
-  render () {
+  onChange(e, key) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.setState((state) => ({
+      expand: {
+        ...state.expand,
+        [key]: !state.expand[key],
+      },
+    }));
+  }
+
+  render() {
     const { data, indent } = this.props;
     const content = [];
 
-
-    _.keys(data).forEach(k => {
-      if (typeof data[k] !== 'object') {
+    _.keys(data).forEach((k) => {
+      if (typeof data[k] !== "object") {
         content.push(
-          <div
-            className={style.item}
-            key={k}
-          >
-            <div className={style.lable} title={k}>{k}</div>
-            <div className={style.value} title={data[k].toString()}>{data[k]}</div>
+          <div className={style.item} key={k}>
+            <div className={style.lable} title={k}>
+              {k}
+            </div>
+            <input
+              className={style.value}
+              value={data[k].toString()}
+              onChange={(e) => this.onChange(e, k)}
+            />
           </div>
         );
       } else {
         content.push(
-          <div
-            key={k}
-            className={style[`indent-level-${indent}`]}
-          >
+          <div key={k} className={style[`indent-level-${indent}`]}>
             <div
-              className={`${style.title} ${this.state.expand[k] ? style.collapse : ''}`}
+              className={`${style.title} ${
+                this.state.expand[k] ? style.collapse : ""
+              }`}
               role="tree"
               tabIndex={0}
-              onClick={e => { this.toggleExpand(e, k) }}
+              onClick={(e) => {
+                this.toggleExpand(e, k);
+              }}
             >
               {k}
             </div>
             <div
               className={`${style.expand}`}
-              style={{ display: this.state.expand[k] ? 'block' : 'none' }}
+              style={{ display: this.state.expand[k] ? "block" : "none" }}
             >
               <Table data={data[k]} indent={this.props.indent + 1} />
             </div>
