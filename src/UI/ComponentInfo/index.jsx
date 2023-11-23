@@ -168,10 +168,10 @@ class ComponentInfo extends React.Component {
         const tempData = _.cloneDeep(_d);
         delete tempData?.familyName;
         delete tempData?.familySymbol;
-
         this.setState({
           data: _.assign(basicInfo, tempData),
           tip: TIPS.ok,
+          newData: JSON.parse(JSON.stringify(data))
         });
         this._currentComponentKey = key;
       } else {
@@ -221,7 +221,7 @@ class ComponentInfo extends React.Component {
         content = <p>未获取到对应属性</p>;
         break;
       default:
-        content = <Table data={this.state.data} />;
+        content = <Table data={this.state.data} newData={this.state.newData} />;
     }
     return (
       <Modal

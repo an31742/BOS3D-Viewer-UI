@@ -35,7 +35,7 @@ class SettingPanel extends React.Component {
           <div
             className={style.tabs}
           >
-            <div
+            {/* <div
               role="presentation"
               className={`${style.tab} ${settingItem === 'model' ? style.active : ''}`}
               onClick={e => { this.switchSetItem('model', e) }}
@@ -43,8 +43,8 @@ class SettingPanel extends React.Component {
               <AntdIcon type="iconmodelsettings" />
               {' '}
               模型设置
-            </div>
-            <div
+            </div> */}
+            {/* <div
               role="presentation"
               className={`${style.tab} ${settingItem === 'camera' ? style.active : ''}`}
               onClick={e => { this.switchSetItem('camera', e) }}
@@ -52,7 +52,7 @@ class SettingPanel extends React.Component {
               <AntdIcon type="iconcamerasettings" />
               {' '}
               相机设置
-            </div>
+            </div> */}
             <div
               role="presentation"
               className={`${style.tab} ${settingItem === 'display' ? style.active : ''}`}
@@ -62,7 +62,7 @@ class SettingPanel extends React.Component {
               {' '}
               显示与效果
             </div>
-            <div
+            {/* <div
               role="presentation"
               className={`${style.tab} ${settingItem === 'toolbar' ? style.active : ''}`}
               onClick={e => { this.switchSetItem('toolbar', e) }}
@@ -70,7 +70,7 @@ class SettingPanel extends React.Component {
               <AntdIcon type="icontoolconfiguration" />
               {' '}
               工具栏配置
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={style.tabPanel}>

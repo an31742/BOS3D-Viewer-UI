@@ -1,0 +1,253 @@
+@charset "utf-8";
+/* 滚动条样式 */
+:global(.bos3dui) *,
+:global(.bos2dui) * {
+  font-size: 12px;
+}
+:global(.bos3dui) *::-webkit-scrollbar,
+:global(.bos2dui) *::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 5px;
+  height: 5px;
+}
+:global(.bos3dui) *::-webkit-scrollbar-thumb,
+:global(.bos2dui) *::-webkit-scrollbar-thumb {
+  /*滚动条滑块*/
+  min-height: 20px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #535353;
+}
+:global(.bos3dui) *::-webkit-scrollbar-track,
+:global(.bos2dui) *::-webkit-scrollbar-track {
+  /*滚动条轨道*/
+  border-radius: 5px;
+  background: none;
+}
+:global(.bos3dui) select,
+:global(.bos2dui) select {
+  padding: 4px 16px 4px 4px;
+  border-radius: 4px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4) url("img/select.png") right no-repeat;
+  appearance: none;
+}
+:global(.bos3dui) :global(.MuiSelect-iconOutlined),
+:global(.bos2dui) :global(.MuiSelect-iconOutlined) {
+  right: 0;
+}
+h4:global(.MuiPickersToolbarText-toolbarTxt):after {
+  content: '\65e5';
+}
+:global .bos-btn {
+  cursor: pointer;
+  box-sizing: border-box;
+  color: white;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 600;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 12px;
+  border: none;
+}
+:global .bos-btn.bos-btn-block,
+:global .bos-btn[block] {
+  width: 100%;
+}
+:global .bos-btn.bos-btn-default {
+  background-color: #6A6B6E;
+}
+:global .bos-btn.bos-btn-default:active,
+:global .bos-btn.bos-btn-default:hover {
+  background-color: #64666D;
+}
+:global .bos-btn.bos-btn-danger {
+  background-color: #FF2845;
+}
+:global .bos-btn.bos-btn-danger:active,
+:global .bos-btn.bos-btn-danger:hover {
+  background-color: #FA0C48;
+}
+:global .bos-btn.bos-btn-primary {
+  background-color: #2878FF;
+}
+:global .bos-btn.bos-btn-primary:active,
+:global .bos-btn.bos-btn-primary:hover {
+  background-color: #26acf9;
+}
+:global .bos-btn[disabled] {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+:global .boss3d-theme-one-form-form-antd {
+  box-sizing: border-box;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input::placeholder,
+:global .boss3d-theme-one-form-form-antd .bos3d-input-number::placeholder {
+  color: #999999;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-form-item {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-form-item-label > label {
+  color: #fff;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select:not(.bos3d-select-customize-input) .bos3d-select-selector {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select-focused:not(.bos3d-select-disabled).bos3d-select:not(.bos3d-select-customize-input) .bos3d-select-selector {
+  border-color: #fff;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select:not(.bos3d-select-customize-input) .bos3d-select-selector {
+  background-color: #2E2F30;
+  box-sizing: border-box;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select-arrow {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select-multiple .bos3d-select-selection-item {
+  color: #DDDDDD;
+  background-color: #232323;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select-multiple .bos3d-select-selection-item-remove {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select-multiple .bos3d-select-selection-item-remove {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-select-multiple .bos3d-select-selection-item-remove:hover {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input-number {
+  width: 100%;
+  background: #2E2F30;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input-number-input {
+  width: 100%;
+  background: #2E2F30;
+  font-weight: 400;
+  color: #DDDDDD;
+  box-sizing: border-box;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input-number-input.bos3d-input-number-input-focused {
+  border-color: #fff;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input-number:hover {
+  border-color: #fff;
+  border-right-width: 1px !important;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input-number:focus,
+:global .boss3d-theme-one-form-form-antd .bos3d-input-number-focused {
+  border-color: #fff;
+  box-shadow: none;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input {
+  padding: 4px 11px !important;
+  background-color: #2E2F30;
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input-affix-wrapper {
+  background-color: #2E2F30;
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-input-affix-wrapper > input.bos3d-input {
+  padding: 0 !important;
+}
+:global .boss3d-theme-one-form-form-antd .anticon.bos3d-input-clear-icon {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .anticon.bos3d-input-clear-icon:hover {
+  color: rgba(255, 255, 255, 0.45);
+}
+:global .boss3d-theme-one-form-form-antd .anticon.bos3d-input-clear-icon:active {
+  color: rgba(255, 255, 255, 0.45);
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-radio-wrapper {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-cascader-input.bos3d-input {
+  background-color: #2E2F30 !important;
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-cascader-picker-arrow {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-cascader-picker-label {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-cascader-picker-clear {
+  background-color: #2E2F30;
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd .bos3d-cascader-picker-clear:hover {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown {
+  background-color: #333333;
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid #575758;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown.bos3d-select-dropdown-select-single-has-anticon .bos3d-select-item-option-selected::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url('../Icon/img/blue/selected.png') no-repeat center center;
+  background-size: 16px 16px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-select-item-option-content {
+  box-sizing: border-box;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-select-item-option-selected:not(.bos3d-select-item-option-disabled) {
+  background-color: #232323;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-select-item-option:hover,
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-select-item-option-active:not(.bos3d-select-item-option-disabled) {
+  background-color: #232323;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-select-item {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-cascader-menu-item {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-cascader-menu-item:hover {
+  background: #232323;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-cascader-menu-item-active:not(.bos3d-cascader-menu-item-disabled),
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-cascader-menu-item-active:not(.bos3d-cascader-menu-item-disabled):hover {
+  background: #232323;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-cascader-menu-item-expand .bos3d-cascader-menu-item-expand-icon,
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-cascader-menu-item-loading-icon {
+  color: #DDDDDD;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown .bos3d-cascader-menu {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown.bos3d-cascader-dropdown-single-has-check-anticon .bos3d-cascader-menu-item {
+  position: relative;
+}
+:global .boss3d-theme-one-form-form-antd-dropdown.bos3d-select-dropdown.bos3d-cascader-dropdown-single-has-check-anticon .bos3d-cascader-menu-item-active:not(.bos3d-cascader-menu-item-expand)::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url('../Icon/img/blue/selected.png') no-repeat center center;
+  background-size: 16px 16px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
